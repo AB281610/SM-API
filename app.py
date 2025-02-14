@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Load your pickle model. Ensure the file exists in your working directory.
-model_path = "fatigue_prediction_model.pkl"
+model_path = "fatigue_model.pkl"
 if not os.path.exists(model_path):
     raise FileNotFoundError(f"Model file {model_path} not found.")
 model = joblib.load(model_path)
